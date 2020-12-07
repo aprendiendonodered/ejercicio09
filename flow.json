@@ -1,1 +1,322 @@
-[]
+[
+    {
+        "id": "847506c6.c75578",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2a4d47ae.d03148",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 360,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "103a8ee.4f99f71",
+                        "port": 4
+                    }
+                ]
+            }
+        ],
+        "env": [
+            {
+                "name": "acum",
+                "type": "num",
+                "value": "20",
+                "ui": {
+                    "icon": "font-awesome/fa-angle-right",
+                    "type": "input",
+                    "opts": {
+                        "types": [
+                            "num"
+                        ]
+                    }
+                }
+            }
+        ],
+        "color": "#DDAA99"
+    },
+    {
+        "id": "d086e68e.895da8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "enriquecrespo.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "8509dc62.c806e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e2ca3f12.592b3",
+        "type": "mqtt in",
+        "z": "847506c6.c75578",
+        "name": "",
+        "topic": "aprendiendonodered/casa/m5stick/temperatura",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d086e68e.895da8",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "daee3fcb.092d9"
+            ]
+        ]
+    },
+    {
+        "id": "71e69f30.da44a",
+        "type": "debug",
+        "z": "847506c6.c75578",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "103a8ee.4f99f71",
+        "type": "function",
+        "z": "2a4d47ae.d03148",
+        "name": "Calculo Datos",
+        "func": "if (msg.acumulado != null) {\n    context.set(\"acumulado\",Number(msg.acumulado));\n    return;\n}\nelse {\n    var acumulado = context.get(\"acumulado\");\n}\n\nvar contador = context.get(\"contador\")+1;\ncontext.set(\"contador\", contador);\n\n//acumulo en el array los datos\nvar datos = context.get(\"datos\");\ndatos.push(Number(msg.payload))\n\n//objeto de salida con el contador\nvar msg5 = {\n    payload:contador,\n    topic:\"contador\"\n};\n\nif (contador < acumulado){\n    return [null,null,null,null,msg5];\n}\nelse {\n    context.set(\"contador\", 0);\n    context.set(\"datos\", []);\n    var msg4 = {\n        payload:datos,\n        topic:\"datos\"\n    }\n    \n    //valores máximo, mínimo y media\n    var msg1 = {\n        payload: Math.max.apply(null,datos),\n        topic: \"MAX\"\n    };\n    \n    var msg2 = {\n        payload: Math.min.apply(null,datos),\n        topic: \"MIN\"\n    };\n    \n    media = datos.reduce((a, b) => (a + b))/datos.length;\n    \n    var msg3 = {\n        payload: media,\n        topic: \"AVG\"\n    };\n\n    return [msg1,msg2,msg3,msg4,msg5];\n}",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is deployed.\ncontext.set(\"contador\", 0);\ncontext.set(\"datos\", []);\ncontext.set(\"acumulado\",env.get(\"acum\"));",
+        "finalize": "",
+        "x": 200,
+        "y": 80,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "adc0b93f.f532a8",
+        "type": "inject",
+        "z": "847506c6.c75578",
+        "name": "",
+        "props": [
+            {
+                "p": "acumulado",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "daee3fcb.092d9"
+            ]
+        ]
+    },
+    {
+        "id": "daee3fcb.092d9",
+        "type": "subflow:2a4d47ae.d03148",
+        "z": "847506c6.c75578",
+        "name": "",
+        "env": [],
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "71e69f30.da44a"
+            ],
+            [
+                "71e69f30.da44a"
+            ],
+            [
+                "71e69f30.da44a"
+            ],
+            [
+                "71e69f30.da44a"
+            ],
+            [
+                "71e69f30.da44a"
+            ]
+        ]
+    }
+]
